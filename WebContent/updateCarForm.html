@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Car Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom styles -->
+    <style>
+    
+    .navbar {
+      background-color: #000033; /* Dark grey navbar */
+    }
+    .navbar-brand, .navbar-nav .nav-link {
+      color: black;
+    }
+    span{
+    color:red;
+    font: 18px
+    }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="#">Car Rental Management System</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="addCarForm.html">Add Car</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ViewCarServlet">View Cars</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="updateCarForm.html">Update Car</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="deleteCar.jsp">Delete Car</a>
+        </li>
+        <!-- User image and logout button -->
+        <li class="nav-item">
+          <div id="userInfo" style="text-align: center; margin-top: 10px;">
+            <img src="images/user.png" alt="User Image" id="userImage" width="30" height="30" style="cursor: pointer;">
+            <span>1273</span>
+            <button id="logoutBtn" class="btn btn-danger" onclick=" window.location.href = 'LogoutServlet';" style="display: none;">Logout</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+    <h2>Update Car Details</h2>
+    <form action="updateCar.jsp" method="post">
+        <label for="carId">Car ID:</label>
+        <input type="number" id="carId" name="carId" required><br>
+        <!-- Include other input fields for updating car details -->
+        <!-- Example: -->
+        <!-- <label for="make">Make:</label> -->
+        <!-- <input type="text" id="make" name="make" required><br> -->
+        <!-- <label for="model">Model:</label> -->
+        <!-- <input type="text" id="model" name="model" required><br> -->
+        <!-- Add more fields as needed -->
+
+        <button type="submit">Update</button>
+    </form>
+</body>
+</html>
